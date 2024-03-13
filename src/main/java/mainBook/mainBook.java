@@ -5,7 +5,7 @@
 package mainBook;
 import com.mycompany.book.Book;
 /**
- *
+ * pasher
  * @author SCIS2PC08
  */
 public class mainBook {
@@ -19,10 +19,10 @@ public class mainBook {
         Book book_five = new Book("La Odisea","HOMERO","Epico","VII","DISPONIBLE","1",3,"","","");
         
        
-        book_one.lendBook();
-        book_one.printBook();
-        book_one.returnBook();
-        book_one.printBook();
+        
+        
+        
+        
         
     }
     
