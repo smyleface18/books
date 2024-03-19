@@ -4,6 +4,7 @@
  */
 package people;
 
+import foods.Dish;
 import values.UserTypes;
 import java.util.Scanner;
 
@@ -37,13 +38,22 @@ public class People {
         System.out.println("- Comida");
         String typeDish = read.next();
         
+        boolean value = false;
+        
         int size = TYPEDISH.length;
         for (int i = 0; i < size; i++) {
-            if(TYPEDISH[i].equalsIgnoreCase(typeDish)){
-                if()
+            if(typeDish.equalsIgnoreCase(TYPEDISH[i])){    
+                value = true;
+                break;
+            
+            }
+            
+            if(value){
+                Dish.orderFood();
             }
             else{
-                System.out.println("ERROR");}
+                System.out.println("ERROR");
+            }
         }
         
         

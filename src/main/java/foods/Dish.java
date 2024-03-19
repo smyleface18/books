@@ -4,6 +4,7 @@
  */
 package foods;
 
+import java.util.Scanner;
 import values.DishTypes;
 import values.DishVaration;
 
@@ -12,6 +13,8 @@ import values.DishVaration;
  * @author SCIS2PC08
  */
 public class Dish {
+    
+    Scanner read = new Scanner(System.in);
     
     DishTypes type;
     int stock;
@@ -25,9 +28,15 @@ public class Dish {
         this.variation = variation;
     }
 
-    public Dish() {
+    public static void orderFood() {
+        System.out.println("OPTION1");
+        System.out.println("OPTION2");
+        System.out.println("OPTION3");
+        
         
     }
+    
+     
 
     public DishTypes getType() {
         return type;
