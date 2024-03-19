@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package mainBook;
+package com.mycompany.book;
 import com.mycompany.book.Book;
 /**
  * pasher
@@ -21,7 +21,7 @@ public class mainBook {
        
         
         
-        
+        book_one.printBook();
         
         
     }
