@@ -24,17 +24,17 @@ public class MainRestaurant {
        People administrative  = new People(UserTypes.ADMINISTRATIVE, 2344, "chela");
        
        
-       Dish   breakfastOne      = new Dish(DishTypes.BREAKFAST,2, 3000, DishVaration.OPTION1);
-       Dish   breakfastTwo      = new Dish(DishTypes.BREAKFAST,1, 3000, DishVaration.OPTION2);
-       Dish   lunchOne          = new Dish(DishTypes.BREAKFAST,0, 4000, DishVaration.OPTION3);
-       Dish   lunchTwo          = new Dish(DishTypes.BREAKFAST,5, 4000, DishVaration.OPTION2);
-       Dish   dinnerOne         = new Dish(DishTypes.BREAKFAST,1, 3000, DishVaration.OPTION3);
-       Dish   dinnerTwo         = new Dish(DishTypes.BREAKFAST,3, 3000, DishVaration.OPTION1);
+       Dish   breakfast      = new Dish(DishTypes.BREAKFAST,2, 3000);
+     //  Dish   breakfastTwo      = new Dish(DishTypes.BREAKFAST,1, 3000, DishVaration.OPTION2);
+       Dish   lunch          = new Dish(DishTypes.LUNCH,0, 4000);
+     // Dish   lunchTwo          = new Dish(DishTypes.BREAKFAST,5, 4000, DishVaration.OPTION2);
+       Dish   dinner         = new Dish(DishTypes.DINNER,1, 3000);
+     //  Dish   dinnerTwo         = new Dish(DishTypes.BREAKFAST,3, 3000, DishVaration.OPTION1);
        
        Scanner read             = new Scanner(System.in);
        
        People arrayPeople[]={student,techer,administrative};
-       Dish   arrayDish  []={breakfastOne,breakfastTwo,lunchOne,lunchTwo,dinnerOne,dinnerTwo};
+       Dish   arrayDish  []={breakfast,lunch,dinner};
        
         System.out.println("Codigo de la persona");
         int cod = read.nextInt();
@@ -53,7 +53,7 @@ public class MainRestaurant {
         System.out.println("- sell");
         String action = read.next();
         if(action.equalsIgnoreCase("buy")){
-            arrayPeople[i].buy();
+               arrayPeople[i].buy(breakfast, lunch, dinner);
         }
         else if (action.equalsIgnoreCase("sell")){
              arrayPeople[i].sell();
@@ -62,4 +62,15 @@ public class MainRestaurant {
         
         
     }
+    
+    
+    
+    
+        public static void orderFood() {
+        
+        
+        
+        
+    }
+    
 }

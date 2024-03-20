@@ -4,6 +4,7 @@
  */
 package foods;
 
+import Restaurant.MainRestaurant;
 import java.util.Scanner;
 import values.DishTypes;
 import values.DishVaration;
@@ -19,24 +20,15 @@ public class Dish {
     DishTypes type;
     int stock;
     int price;
-    DishVaration variation;
+    //DishVaration variation;
 
-    public Dish(DishTypes type, int stock, int price, DishVaration variation) {
+    public Dish(DishTypes type, int stock, int price ) {
         this.type = type;
         this.stock = stock;
         this.price = price;
-        this.variation = variation;
+       
     }
 
-    public static void orderFood() {
-        System.out.println("OPTION1");
-        System.out.println("OPTION2");
-        System.out.println("OPTION3");
-        
-        
-    }
-    
-     
 
     public DishTypes getType() {
         return type;
@@ -62,13 +54,13 @@ public class Dish {
         this.price = price;
     }
 
-    public DishVaration getVariation() {
-        return variation;
-    }
-
-    public void setVariation(DishVaration variation) {
-        this.variation = variation;
-    }
+//    public DishVaration getVariation() {
+//        return variation;
+//    }
+//
+//    public void setVariation(DishVaration variation) {
+//        this.variation = variation;
+//    }
     
     
     

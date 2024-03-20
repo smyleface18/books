@@ -7,6 +7,7 @@ package people;
 import foods.Dish;
 import values.UserTypes;
 import java.util.Scanner;
+import values.DishTypes;
 
 /**
  *
@@ -27,38 +28,60 @@ public class People {
     }
     
     
-    
-    public void buy(){
+        public  void buy( Dish breakfast, Dish lunch, Dish dinner){
         
-        String TYPEDISH []={"Desayuno","Almuerzo","Comida"};
+        Dish   arrayDish  [] ={breakfast,lunch,dinner};
+        int size = arrayDish.length;
         
         System.out.println("Que tipo de comida quieres comprar");
-        System.out.println("- Desayuno");
-        System.out.println("- Almuerzo");
-        System.out.println("- Comida");
-        String typeDish = read.next();
         
-        boolean value = false;
-        
-        int size = TYPEDISH.length;
-        for (int i = 0; i < size; i++) {
-            if(typeDish.equalsIgnoreCase(TYPEDISH[i])){    
-                value = true;
-                break;
-            
+            for (int i = 0; i < size; i++) {
+                System.out.println("COD "+i+" = "+arrayDish[i].getType());
             }
             
+            int typeDish = read.nextInt();
+            DishTypes orderFood;
+            switch (typeDish) {
+                case 0:
+                     orderFood = breakfast.getType();
+                case 1:
+                     orderFood = lunch.getType();
+                     System.out.println(lunch.getType());
+                case 2:
+                     orderFood = dinner.getType();
+                                                      
+                    break;
+                default:
+                    throw new AssertionError();
+            }
+
+
+        boolean value = false;
+        
+            int i;
+        for ( i=0;i < size; i++) {
+            if(arrayDish[i].getType() == orderFood){
+                System.out.println(arrayDish[i].getType() );
+                value = true;
+                break;
+            }
+        }
+            
             if(value){
-                Dish.orderFood();
+                if(arrayDish[i].getStock() > 0){
+                    arrayDish[i].setStock(arrayDish[i].getStock()-1);   
+                System.out.println("Plato vendido, quedan disponibles "+ arrayDish[i].getStock());
+                }
+
+                else {
+                        System.out.println("No hay platos disponibles");}
             }
             else{
                 System.out.println("ERROR");
             }
-        }
-        
-        
         
     }
+
     
     public void sell(){
         if (this.type != UserTypes.ADMINISTRATIVE){
